@@ -40,9 +40,16 @@ body {
   .container .img-container {
     height: auto;
     text-align: center;
-    width: 70%; }
+    width: 70%;
+    max-width: 60rem; }
     .container .img-container img {
       vertical-align: top;
       width: 100%; }
+
+@media (min-width: 800px) {
+  .container h1 {
+    font-size: 3rem; }
+  .container p {
+    font-size: 1.9rem; } }
 
 /*# sourceMappingURL=style.css.map */
