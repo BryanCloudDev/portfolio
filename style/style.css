@@ -1,55 +1,80 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@keyframes bg-animated {
-  0% {
-    background-position: 50% 0%; }
-  50% {
-    background-position: 50% 100%; }
-  100% {
-    background-position: 50% 0%; } }
+:root {
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color:#f5f5f5;
+  --third-bg-color: #000000;
+  --primary-font-color: #ffffff;
+}
+
+/*mobile first pattern*/
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+}
 
 body {
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(52deg, #0005ff, #00fdff);
-  background-size: 400% 400%;
-  animation: bg-animated 28s ease infinite; }
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
 
 .container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  width: 90%;
   margin: 0 auto;
-  width: 100%; }
-  .container h1 {
-    color: #fff;
-    font-size: 2.3rem;
-    height: auto;
-    text-align: center;
-    text-transform: uppercase;
-    width: 45%; }
-  .container p {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    width: 45%; }
-  .container .img-container {
-    height: auto;
-    text-align: center;
-    width: 70%;
-    max-width: 60rem; }
-    .container .img-container img {
-      vertical-align: top;
-      width: 100%; }
+  display: flex;
+}
 
-@media (min-width: 800px) {
-  .container h1 {
-    font-size: 3rem; }
-  .container p {
-    font-size: 1.9rem; } }
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  padding: 2rem 0rem;
+  background-color: var(--third-bg-color);
+  color: var(--primary-font-color);
+  display: flex;
+  align-content: center;
+}
+.header .logo a {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-font-color);
+}
+.header .container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header .container .menu-checkbox {
+  display: none;
+}
+.header .container label {
+  display: flex;
+  align-items: center;
+}
+.header .container .nav {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+.header .container .nav ul {
+  margin: 2rem 0px 0px;
+  padding: 0px;
+}
+.header .container .nav ul li {
+  list-style: none;
+  margin: 0px;
+}
+.header .container .nav ul li a {
+  padding: 10px 0px;
+  width: 100%;
+  color: var(--primary-font-color);
+  transition: 0.5s ease;
+  border-radius: 0.5rem;
+}
+.header .container .nav ul li a:hover {
+  background-color: #1e1e1e;
+}
+.header .container .menu-checkbox:checked ~ .nav {
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
