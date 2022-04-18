@@ -3,6 +3,7 @@
     --secondary-bg-color:#f5f5f5
     --third-bg-color: #000000
     --primary-font-color: #ffffff
+    --secondary-font-color: #000000
 /*mobile first pattern*/
 *
     box-sizing: border-box
@@ -11,10 +12,22 @@ html
 body
     font-size: 1.6rem
     font-family: 'Open Sans', sans-serif
+    background-color: var(--secondary-bg-color)
 .container
         width: 90%
+        max-width: 100rem
         margin: 0 auto
         display: flex
 a
     display: inline-block
     text-decoration: none
+.button
+    padding: 1rem 2rem
+    border-radius: 2.5rem
+    background-color: var(--third-bg-color)
+    color: var(--primary-font-color)
+    border: solid var(--third-bg-color) 0.2rem
+.button:hover
+    border: solid var(--third-bg-color) 0.2rem
+    background-color: var(--primary-bg-color)
+    color: var(--secondary-font-color)

@@ -3,6 +3,7 @@
   --secondary-bg-color:#f5f5f5;
   --third-bg-color: #000000;
   --primary-font-color: #ffffff;
+  --secondary-font-color: #000000;
 }
 
 /*mobile first pattern*/
@@ -17,10 +18,12 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
+  background-color: var(--secondary-bg-color);
 }
 
 .container {
   width: 90%;
+  max-width: 100rem;
   margin: 0 auto;
   display: flex;
 }
@@ -28,6 +31,20 @@ body {
 a {
   display: inline-block;
   text-decoration: none;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 2.5rem;
+  background-color: var(--third-bg-color);
+  color: var(--primary-font-color);
+  border: solid var(--third-bg-color) 0.2rem;
+}
+
+.button:hover {
+  border: solid var(--third-bg-color) 0.2rem;
+  background-color: var(--primary-bg-color);
+  color: var(--secondary-font-color);
 }
 
 .header {
@@ -74,7 +91,7 @@ a {
   transition: 0.5s ease;
   border-radius: 0.5rem;
 }
-.header .container .nav ul li a:hover {
+.header .container .nav ul li :hover {
   background-color: #1e1e1e;
 }
 .header .container .menu-checkbox:checked ~ .nav {
@@ -109,6 +126,89 @@ a {
   padding: 1rem;
 }
 .container .about .skills .img-container img {
+  width: 100%;
+}
+.container .portfolio {
+  width: 100%;
+}
+.container .portfolio h2 {
+  width: 100%;
+  text-align: center;
+}
+.container .portfolio .site {
+  display: inline-block;
+  margin: 2rem 0rem;
+  width: 100%;
+}
+.container .portfolio .site .img-container {
+  width: 100%;
+}
+.container .portfolio .site .img-container img {
+  width: 100%;
+}
+.container .portfolio .site h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .portfolio .site h3 .date {
+  background-color: var(--third-bg-color);
+  color: var(--primary-font-color);
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+.container .portfolio .site p {
+  text-align: center;
+}
+.container .portfolio .site .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .portfolio .site .buttons .see {
+  margin-left: 2rem;
+}
+.container .contact {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container .contact h2 {
+  width: 100%;
+}
+.container .contact .button {
+  text-align: center;
+}
+.container .contact .download {
+  margin-left: 2rem;
+}
+
+.footer {
+  background-color: var(--third-bg-color);
+}
+.footer .container {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0rem;
+}
+.footer .container a {
+  color: var(--primary-font-color);
+}
+.footer .container :hover {
+  color: var(--secondary-bg-color);
+}
+.footer .container .attr {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--primary-font-color);
+  font-size: 1.6rem;
   width: 100%;
 }
 
