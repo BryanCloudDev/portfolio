@@ -158,21 +158,20 @@
         </div>
     </footer>
     <script>
-        const data = null;
+    const options = {
+      method: 'GET',
+      headers: {
+        Authorization: 'Zoho-oauthtoken 1000.f2c6a419188dabce4cc4df5ce940e16d.01e2f5eaa40f3e96bf0bddf89ae9e089',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://bryancloud.dev',
+        'Content-Type': 'text/json',
+      }
+    };
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "https://creator.zoho.com/api/v2/elecantoclubapp/el-encanto/report/Socios_Report");
-xhr.setRequestHeader("Authorization", "Zoho-oauthtoken 1000.1fd690474a805e921b9da66b4314c365.24aca256cd384394aa3a34edd31402d2");
-
-xhr.send(data);
+    fetch('https://creator.zoho.com/api/v2/elecantoclubapp/el-encanto/report/Socios_Report', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
     </script>
 </body>
 <script src="https://use.fontawesome.com/d034c4f984.js"></script>
