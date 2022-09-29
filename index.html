@@ -157,6 +157,23 @@
             <span class="attr" id="author"></span>
         </div>
     </footer>
+    <script>
+        const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "https://creator.zoho.com/api/v2/elecantoclubapp/el-encanto/report/Socios_Report");
+xhr.setRequestHeader("Authorization", "Zoho-oauthtoken 1000.1fd690474a805e921b9da66b4314c365.24aca256cd384394aa3a34edd31402d2");
+
+xhr.send(data);
+    </script>
 </body>
 <script src="https://use.fontawesome.com/d034c4f984.js"></script>
 <script src="./js/index.js"></script>
